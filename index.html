@@ -621,20 +621,86 @@
     }
 
     @media (max-width: 760px) {
+      .game-shell {
+        gap: 8px;
+        padding: 8px 8px 12px;
+      }
+
       .hud {
-        grid-template-columns: 1fr;
+        width: min(98vw, 560px);
+        grid-template-columns: minmax(92px, 112px) minmax(0, 1fr) minmax(82px, 96px);
+        gap: 6px;
       }
 
       .hud-side {
-        min-height: 82px;
+        min-height: 68px;
+        padding: 8px 6px;
+        gap: 6px;
       }
 
-      .arena-wrap {
-        height: min(60vh, 640px);
+      .score-badge,
+      .best-badge {
+        min-width: 0;
+        padding: 6px 8px;
+        border-radius: 16px;
+      }
+
+      .badge-label {
+        font-size: 0.66rem;
+      }
+
+      .badge-value {
+        font-size: clamp(1rem, 4.4vw, 1.3rem);
+      }
+
+      .title-panel {
+        padding: 8px 10px;
+      }
+
+      .title-panel h1 {
+        font-size: clamp(0.95rem, 4vw, 1.2rem);
+        margin-bottom: 2px;
+      }
+
+      .problem-label {
+        font-size: 0.62rem;
+      }
+
+      .problem-text {
+        min-height: 1.15em;
+        font-size: clamp(1rem, 4.9vw, 1.45rem);
+      }
+
+      .lives {
+        min-width: 0;
+        min-height: 42px;
+        padding: 6px 8px;
+        gap: 4px;
+      }
+
+      .heart {
+        font-size: clamp(0.95rem, 4.1vw, 1.2rem);
       }
 
       .status-bar {
-        min-height: 34px;
+        width: min(96vw, 460px);
+        min-height: 32px;
+        padding: 4px 10px;
+        font-size: clamp(0.78rem, 3.1vw, 0.94rem);
+      }
+
+      .arena-wrap {
+        height: min(63vh, 620px);
+      }
+
+      .controls {
+        width: min(96vw, 460px);
+        gap: 10px;
+      }
+
+      .control-button {
+        min-height: 58px;
+        font-size: clamp(1.05rem, 5vw, 1.35rem);
       }
     }
 
